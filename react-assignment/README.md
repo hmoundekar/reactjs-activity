@@ -1,5 +1,17 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Problem Statement
+
+* Create TWO new components: UserInput and UserOutput
+* UserInput should hold an input element, UserOutput two paragraphs
+* Output multiple UserOutput components in the App component (any paragraph texts of your choice)
+* Pass a username (of your choice) to UserOutput via props and display it there
+* Add state to the App component (=> the username) and pass the username to the UserOutput component
+* Add a method to manipulate the state (=> an event-handler method)
+* Ensure that the new input entered by the user overwrites the old username passed to UserOutput
+* Add two-way-binding to your input (in UserInput) to also display the starting username
+
+
 ## Available Scripts
 
 In the project directory, you can run:
