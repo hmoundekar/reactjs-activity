@@ -1,0 +1,12 @@
+.result-validation {
+  font-size: 1.1rem;
+  font-weight: 800;
+}
+
+.not-valid {
+  color: red;
+}
+
+.valid {
+  color: green;
+}

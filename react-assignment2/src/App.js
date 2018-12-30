@@ -1,26 +1,55 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import ValidationComponent from "./ValidationComponent/ValidationComponent";
+import CharComponent from "./CharComponent/CharComponent";
 import './App.css';
 
 class App extends Component {
+  state = {
+    text: ""
+  };
+
+  handleTextChange = event => {
+    this.setState({
+      text: event.target.value
+    });
+
+    console.log(this.state.text);
+  };
+
+  removeChar = (char, index) => {
+    let textCopy = this.state.text;
+    let textArray = textCopy.split("");
+
+    textArray.splice(index, 1);
+
+    this.setState({
+      text: textArray.join("")
+    });
+  }
   render() {
+    let chars = this.state.text.split("");
+
+    let CharComponents = chars.map((char, index) => {
+      return (
+        <CharComponent
+          key={index}
+          index={index}
+          handleClickChar={this.removeChar}
+          textContent={char}
+        />
+      );
+    });
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+        <div>
+          <label htmlFor="textInput">
+            Enter a text with a minimum length of 5 chars:{" "}
+          </label>
+          <input id="textInput" onChange={this.handleTextChange} />
+        </div>
+        <ValidationComponent textLength={this.state.text.length} />
+        {CharComponents}
+        </div>
     );
   }
 }

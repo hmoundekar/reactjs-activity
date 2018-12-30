@@ -1,4 +1,17 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Problem Statement
+
+* Create an input field (in App component) with a change listener which outputs the length of the entered text below it (for example in a paragraph).
+
+* Create a new component "ValidationComponent", which receives the text length as a prop.
+
+* Inside the ValidationComponent either output "Text is too short" or "The text is long enough" depending on the text-length. Use 5 chars as minimum.
+
+* Create another component "CharComponent" and style as an inline-box.
+
+* Render a list of CharComponents where each CharComponent receives ad different leter of the entered text (in the initial field) as a prop.
+
+* When you click a CharComponent, it should be removed from the entered text.
 
 ## Available Scripts
 

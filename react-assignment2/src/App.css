@@ -30,3 +30,16 @@
     transform: rotate(360deg);
   }
 }
+#textInput{
+  height: 40px;
+  border: none;
+  border-bottom: 1px solid #c0c0c0;
+}
+#textInput:hover{
+  box-shadow: none;
+  outline: 0;
+}
+#textInput:focus{
+  box-shadow: none;
+  outline: 0;
+}
